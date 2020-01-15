@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: sethburtonhall/dks2.0
 
 media_folder: static/assets
 public_folder: assets
