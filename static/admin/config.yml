@@ -32,7 +32,7 @@ collections:
         name: "clients"
         file: "content/pages/clients.md"
         fields:
-          - label: Client
+          - label: Clients
             name: client
             widget: list
             fields:
@@ -41,7 +41,7 @@ collections:
         name: "testimonials"
         file: "content/pages/testimonials.md"
         fields:
-          - label: Testimonial
+          - label: Testimonials
             name: testimonial
             widget: list
             fields:
