@@ -18,19 +18,13 @@ collections:
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }
   
-  - label: "Pages Test"
+  - label: "Pages"
     name: "pages"
     files:
-      - label: "About Page"
+      - label: "About"
         name: "about"
         file: "src/content/about.md"
         fields:
+          - {label: Name, name: title, widget: string}
           - {label: Title, name: title, widget: string}
           - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
