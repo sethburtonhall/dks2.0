@@ -32,8 +32,8 @@ collections:
         name: "clients"
         file: "content/pages/clients.md"
         fields:
-          - label: Clients
-            name: clients
+          - label: Client
+            name: client
             widget: list
             fields:
               - { label: Client Name, name: clientName, widget: string }
@@ -41,8 +41,8 @@ collections:
         name: "testimonials"
         file: "content/pages/testimonials.md"
         fields:
-          - label: Testimonials
-            name: testimonials
+          - label: Testimonial
+            name: testimonial
             widget: list
             fields:
               - { label: Name, name: name, widget: string }
