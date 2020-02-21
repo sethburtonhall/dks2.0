@@ -1,5 +1,5 @@
 ---
-name: David Stanley
+name: David "Sketch" Stanley
 title: Painter and Illustrator
 intro: >-
   David Keith Stanley is an illustrator living in North Carolina serving
