@@ -1,5 +1,5 @@
 ---
-name: Cl
+name: Make this a list
 testimonial:
   - company: Our State Magazine
     name: Jason Chenier
