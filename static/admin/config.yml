@@ -28,7 +28,6 @@ collections:
           - { label: Name, name: name, widget: string }
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
-    files:
       - label: "Clients"
         name: "clients"
         file: "src/content/clients.md"
