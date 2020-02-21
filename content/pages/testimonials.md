@@ -1,8 +1,7 @@
 ---
-name: Make this a list
 testimonial:
   - company: Our State Magazine
-    name: Jason Chenier
+    name: Jason Chenier Test
     position: Art Director
     quote: >-
       David is a tremendously talented and thoughtful artist who consistently
