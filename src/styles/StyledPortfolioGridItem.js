@@ -5,11 +5,11 @@ export const StyledPortfolioGridItem = styled.div`
   width: 100%;
   margin-bottom: 30px;
 
-  @media ${device.tablet} {
+  @media ${device.mobileUp} {
     width: 48%;
   }
 
-  @media ${device.laptop} {
+  @media ${device.tabletUp} {
     width: 31.3%;
   }
 
@@ -19,7 +19,8 @@ export const StyledPortfolioGridItem = styled.div`
   }
 
   img {
-    margin-bottom: 5px;
+    width: 100%;
+    margin: 0 auto 5px;
   }
 
   .portfolio-cat {
