@@ -27,10 +27,12 @@ collections:
         fields:
           - label: About
             name: about-field
+            widget: object
             fields:
               - { label: Name, name: name, widget: string }
               - { label: Title, name: title, widget: string }
               - { label: Intro, name: intro, widget: markdown }
+
       - label: "Clients"
         name: "clients"
         file: "content/pages/clients.md"
@@ -40,6 +42,7 @@ collections:
             widget: list
             fields:
               - { label: Client Name, name: clientName, widget: string }
+
       - label: "Testimonials"
         name: "testimonials"
         file: "content/pages/testimonials.md"
@@ -52,12 +55,14 @@ collections:
               - { label: Position, name: position, widget: string }
               - { label: Company, name: company, widget: string }
               - { label: Quote, name: quote, widget: markdown }
+      
       - label: "Contact"
         name: "contact"
         file: "content/pages/contact.md"
         fields:
           - label: Contact
             name: contact-label
+            widget: object
             fields:
               - { label: Phone, name: phone, widget: string }
               - { label: email, name: email, widget: string }
