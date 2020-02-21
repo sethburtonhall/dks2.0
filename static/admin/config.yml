@@ -42,3 +42,9 @@ collections:
               - {label: Position, name: position, widget: string}
               - {label: Company, name: company, widget: string}
               - {label: Quote, name: quote, widget: markdown}
+      - label: "Contact"
+        name: "contact"
+        file: "src/content/contact.md"
+        fields:
+          - { label: Phone, name: phone, widget: string }
+          - { label: email, name: email, widget: string } 
