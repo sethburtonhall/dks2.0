@@ -32,7 +32,15 @@ collections:
         name: "clients"
         file: "src/content/clients.md"
         fields:
-          - { label: Name, name: name, widget: string }
+          - label: Client
+            name: client
+            widget: list
+            fields:
+              - {label: Client Name, name: clientName, widget: string}
+      - label: "Testimonials"
+        name: "testimonials"
+        file: "src/content/testimonials.md"
+        fields:
           - label: Testimonial
             name: testimonial
             widget: list
