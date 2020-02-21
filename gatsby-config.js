@@ -2,11 +2,13 @@ module.exports = {
   siteMetadata: {
     // edit below
     title: `David K. Stanley Studio`,
-    author: `David Stanley`,
-    description: `The home of DKS Studio`,
+    author: `David K. Stanley`,
+    description: `Painting and Illustration`,
     siteUrl: `https://dks-studio.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      instagram: `davidkstanley.studio`,
+      facebook: `https://www.facebook.com/profile.php?id=100023120494669`,
+      linkedin: `https://www.linkedin.com/in/david-stanley-b156b970/`,
     },
   },
   plugins: [
