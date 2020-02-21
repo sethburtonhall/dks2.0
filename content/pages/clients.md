@@ -1,6 +1,6 @@
 ---
 client:
-  - clientName: Baldwin Richardson
+  - clientName: Baldwin Richardson Test
   - clientName: Bass Pro Shops
   - clientName: Biscuitville
 ---
