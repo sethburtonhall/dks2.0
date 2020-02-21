@@ -23,35 +23,35 @@ collections:
     files:
       - label: "About"
         name: "about"
-        file: "src/content/about.md"
+        file: "content/pages/about.md"
         fields:
           - { label: Name, name: name, widget: string }
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
       - label: "Clients"
         name: "clients"
-        file: "src/content/clients.md"
+        file: "content/pages/clients.md"
         fields:
           - label: Clients
             name: clients
             widget: list
             fields:
-              - {label: Client Name, name: clientName, widget: string}
+              - { label: Client Name, name: clientName, widget: string }
       - label: "Testimonials"
         name: "testimonials"
-        file: "src/content/testimonials.md"
+        file: "content/pages/testimonials.md"
         fields:
           - label: Testimonials
             name: testimonials
             widget: list
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Company, name: company, widget: string}
-              - {label: Quote, name: quote, widget: markdown}
+              - { label: Name, name: name, widget: string }
+              - { label: Position, name: position, widget: string }
+              - { label: Company, name: company, widget: string }
+              - { label: Quote, name: quote, widget: markdown }
       - label: "Contact"
         name: "contact"
-        file: "src/content/contact.md"
+        file: "content/pages/contact.md"
         fields:
           - { label: Phone, name: phone, widget: string }
-          - { label: email, name: email, widget: string } 
+          - { label: email, name: email, widget: string }
