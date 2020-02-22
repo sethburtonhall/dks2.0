@@ -33,13 +33,13 @@ module.exports = {
         name: `blog`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/content/assets`,
+    //     name: `assets`,
+    //   },
+    // },
     "gatsby-transformer-remark",
     {
       resolve: `gatsby-plugin-mdx`,
@@ -87,7 +87,7 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         // edit below
-        icon: `content/assets/gatsby-icon.png`,
+        // icon: `content/assets/gatsby-icon.png`,
       },
     },
     {
