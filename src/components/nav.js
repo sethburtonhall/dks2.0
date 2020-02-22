@@ -1,3 +1,4 @@
+// http://negomi.github.io/react-burger-menu/
 import React from "react"
 
 // Gatsby

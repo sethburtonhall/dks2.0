@@ -25,7 +25,7 @@ collections:
         file: "content/pages/about.md"
         fields:
           - label: About
-            name: about-field
+            name: about
             widget: object
             fields:
               - { label: Name, name: name, widget: string }
@@ -54,14 +54,31 @@ collections:
               - { label: Position, name: position, widget: string }
               - { label: Company, name: company, widget: string }
               - { label: Quote, name: quote, widget: markdown }
-      
+
       - label: "Contact"
         name: "contact"
         file: "content/pages/contact.md"
         fields:
           - label: Contact
-            name: contact-label
+            name: contact
             widget: object
             fields:
               - { label: Phone, name: phone, widget: string }
               - { label: Email, name: email, widget: string }
+
+  - name: portfolio
+    label: Portfolio
+    folder: content/portfolio
+    create: true
+    fields:
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        media_folder: ""
+        public_folder: ""
+        media_library:
+          config:
+            multiple: false
+      - { name: title, label: Title }
+      - { name: description, label: Description }
+      - { name: body, label: Body, widget: markdown }
