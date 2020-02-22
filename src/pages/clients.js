@@ -4,9 +4,10 @@ import { graphql } from "gatsby"
 // Components
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import PortfolioGrid from "../components/portfolioGrid"
+import Clients from "../components/clientList"
+import Testimonials from "../components/testimonials"
 
-class IndexPage extends Component {
+class Client extends Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -14,10 +15,11 @@ class IndexPage extends Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="Home"
+          title="Clients"
           keywords={[`Illustration`, `Painting`, `North Carolina`]}
         />
-        <PortfolioGrid />
+        <Clients />
+        <Testimonials />
       </Layout>
     )
   }
@@ -33,4 +35,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default IndexPage
+export default Client

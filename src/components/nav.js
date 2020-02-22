@@ -37,9 +37,9 @@ const Nav = ({ location }) => {
         <Link id="contact" to="/contact" className="menu-item">
           Contact
         </Link>
-        <Link id="store" to="/store" className="menu-item">
+        <a id="store" href="https://www.google.com/" className="menu-item">
           Store
-        </Link>
+        </a>
       </Menu>
     </StyledNav>
   )

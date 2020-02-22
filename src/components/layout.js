@@ -21,7 +21,11 @@ class Layout extends Component {
         <Header>
           <h1>
             <Link to={location.pathname === blogPath ? `/blog/` : `/`}>
-              <img className="logo" src="assets/dks-watermark.png" alt="Logo" />
+              <img
+                className="logo"
+                src="assets/dks-watermark.png"
+                alt="Logo"
+              />
             </Link>
           </h1>
         </Header>
@@ -31,7 +35,7 @@ class Layout extends Component {
         <Header>
           <h3>
             <Link to={`/`}>
-              <img className="logo" src="assets/dks-watermark.png" alt="Logo" />
+              <img className="logo" src="../assets/dks-watermark.png" alt="Logo" />
             </Link>
           </h3>
         </Header>
