@@ -20,10 +20,10 @@ class Layout extends Component {
       header = (
         <Header>
           <h1>
-            <Link to={location.pathname === blogPath ? `/blog/` : `/`}>
+            <Link to={`/`}>
               <img
                 className="logo"
-                src="assets/dks-watermark.png"
+                src="../assets/dks-watermark.png"
                 alt="Logo"
               />
             </Link>
