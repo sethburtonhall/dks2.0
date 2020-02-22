@@ -1,5 +1,6 @@
 ---
-phone: (336) 420-2911
-email: sketch@davidkstanley.com
+contact-label:
+  email: sketch@davidkstanley.com
+  phone: (336) 420-2911
 ---
 
