@@ -6,8 +6,8 @@ backend:
 media_folder: static/assets
 public_folder: assets
 
-display_url: https://your-site.com
-
+publish_mode: editorial_workflow
+display_url: https://dks-studio.netlify.com
 logo_url: https://dks-studio.netlify.com/assets/dks-watermark.png
 
 collections:
