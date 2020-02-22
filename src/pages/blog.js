@@ -18,7 +18,7 @@ class Blog extends React.Component {
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <div key={node.fields.slug}>
+              <div key={node.fields.slug} className="blog-post">
                 <h3
                   style={{
                     marginBottom: rhythm(1 / 4),
@@ -55,7 +55,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(
+      filter: { excerpt: { ne: "" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
           excerpt
