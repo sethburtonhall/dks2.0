@@ -23,21 +23,21 @@ const ContactInfo = () => {
   )
 }
 
-const contactQuery = graphql`
-  query ContactQuery {
-    allFile(filter: { name: { eq: "contact" } }) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              email
-              phone
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// const contactQuery = graphql`
+//   query ContactQuery {
+//     allFile(filter: { name: { eq: "contact" } }) {
+//       edges {
+//         node {
+//           childMarkdownRemark {
+//             frontmatter {
+//               email
+//               phone
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default ContactInfo

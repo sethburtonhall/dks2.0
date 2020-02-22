@@ -34,32 +34,32 @@ const Bio = () => {
   )
 }
 
-const bioQuery = graphql`
-  query BioQuery {
-    site {
-      siteMetadata {
-        author
-        social {
-          facebook
-          instagram
-          linkedin
-        }
-      }
-    }
-    allFile(filter: { name: { eq: "about" } }) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              name
-              title
-              intro
-            }
-          }
-        }
-      }
-    }
-  }
-`
+// const bioQuery = graphql`
+//   query BioQuery {
+//     site {
+//       siteMetadata {
+//         author
+//         social {
+//           facebook
+//           instagram
+//           linkedin
+//         }
+//       }
+//     }
+//     allFile(filter: { name: { eq: "about" } }) {
+//       edges {
+//         node {
+//           childMarkdownRemark {
+//             frontmatter {
+//               name
+//               title
+//               intro
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default Bio
