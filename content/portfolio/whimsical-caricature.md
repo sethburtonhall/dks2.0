@@ -12,3 +12,5 @@ description: >-
   laughs!
 ---
 ![Sir Andy Griffith](/assets/andy-griffith.gif "Sir Andy Griffith")
+
+![Birds of a Feather](/assets/birds-of-a-feather_181205_033950.gif "Birds of a Feather")
