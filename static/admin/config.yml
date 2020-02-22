@@ -7,8 +7,8 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
-    label: Blog
+  - label: Blog
+    name: blog
     folder: content/blog
     create: true
     fields:
@@ -24,13 +24,9 @@ collections:
         name: "about"
         file: "content/pages/about.md"
         fields:
-          - label: About
-            name: about
-            widget: object
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Title, name: title, widget: string }
-              - { label: Intro, name: intro, widget: markdown }
+          - { label: Name, name: name, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
 
       - label: "Clients"
         name: "clients"
@@ -59,15 +55,11 @@ collections:
         name: "contact"
         file: "content/pages/contact.md"
         fields:
-          - label: Contact
-            name: contact
-            widget: object
-            fields:
-              - { label: Phone, name: phone, widget: string }
-              - { label: Email, name: email, widget: string }
+          - { label: Phone, name: phone, widget: string }
+          - { label: Email, name: email, widget: string }
 
-  - name: portfolio
-    label: Portfolio
+  - label: Portfolio
+    name: portfolio
     folder: content/portfolio
     create: true
     fields:
