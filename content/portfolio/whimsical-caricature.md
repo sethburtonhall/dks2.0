@@ -11,4 +11,4 @@ description: >-
   Goodwill Industries, Krispy Kreme, and others.  A picture is worth a thousand
   laughs!
 ---
-![](/assets/andy-griffith.gif)
+![Sir Andy Griffith](/assets/andy-griffith.gif "Sir Andy Griffith")
