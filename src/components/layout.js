@@ -19,7 +19,7 @@ class Layout extends Component {
     if (location.pathname === rootPath || location.pathname === blogPath) {
       header = (
         <Header>
-          <h1>
+          <h1 className="header">
             <Link to={`/`}>
               <img
                 className="logo"
@@ -33,7 +33,7 @@ class Layout extends Component {
     } else {
       header = (
         <Header>
-          <h3>
+          <h3 className="header">
             <Link to={`/`}>
               <img className="logo" src="../assets/dks-watermark.png" alt="Logo" />
             </Link>

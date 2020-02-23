@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { device } from "./MediaQueries"
 
 // Typography
 import { rhythm } from "../utils/typography"
@@ -17,14 +18,16 @@ export const Header = styled.header`
   justify-content: space-between;
   align-content: center;
 
-  h1 {
-    margin-bottom: ${rhythm(1.5)};
+  .header {
+    margin-bottom: 15px;
     margin-top: 0;
-  }
 
-  h3 {
-    font-family: Montserrat, sans-serif;
-    margin-top: 0;
+    @media ${device.mobileUp} {
+      grid-template-columns: repeat(auto-fill, 48%);
+      justify-content: space-between;
+      grid-gap: 1rem;
+      margin-bottom: ${rhythm(1.5)};
+    }
   }
 
   a {

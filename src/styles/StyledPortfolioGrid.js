@@ -14,6 +14,6 @@ export const StyledPortfolioGrid = styled.ul`
   }
 
   @media ${device.tabletUp} {
-    grid-template-columns: repeat(auto-fill, 30%);
+    grid-template-columns: repeat(auto-fill, 31%);
   }
 `
