@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 // Gatsby
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
 
 // Styles
 import { StyledPortfolioGridItem } from "../styles/StyledPortfolioGridItem"
@@ -12,13 +12,12 @@ const PortfolioGridItem = () => {
     <StaticQuery
       query={portfolioCover}
       render={data => {
-        const { slug } = data.allMdx.edges[0].node.fields
-        const { edges } = data.allMarkdownRemark
+        const { edges } = data.allMdx
         return (
           <>
             {edges.map(({ node }, index) => (
               <StyledPortfolioGridItem key={index}>
-                <Link to={`portfolio${slug}`}>
+                <Link to={`/portfolio${node.fields.slug}`}>
                   <img src={node.frontmatter.thumbnail} alt="Portfolio Cover" />
                   <h4 className="portfolio-cat">{node.frontmatter.title}</h4>
                 </Link>
@@ -33,21 +32,15 @@ const PortfolioGridItem = () => {
 
 const portfolioCover = graphql`
   query PortfolioCover {
-    allMdx(filter: { frontmatter: { templateKey: { eq: "portfolio" } } }) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-        }
-      }
-    }
-    allMarkdownRemark(
+    allMdx(
       filter: { frontmatter: { templateKey: { eq: "portfolio" } } }
       sort: { order: ASC, fields: id }
     ) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             title
             thumbnail
