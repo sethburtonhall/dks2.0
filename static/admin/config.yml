@@ -16,6 +16,7 @@ collections:
     folder: content/blog
     create: true
     fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post" }
       - { name: title, label: Title }
       - { name: date, label: Date, widget: date }
       - { name: description, label: Description }
@@ -75,6 +76,7 @@ collections:
         media_library:
           config:
             multiple: false
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "portfolio" }
       - { name: title, label: Title }
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }

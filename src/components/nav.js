@@ -29,6 +29,9 @@ const Nav = ({ location }) => {
         <Link id="about" to="/about" className="menu-item">
           About
         </Link>
+        <Link id="Portfolio" to="/" className="menu-item">
+          Portfolio
+        </Link>
         <Link id="clients" to="/clients" className="menu-item">
           Clients
         </Link>
