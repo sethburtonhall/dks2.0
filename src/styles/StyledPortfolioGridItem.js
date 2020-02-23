@@ -7,14 +7,6 @@ export const StyledPortfolioGridItem = styled.li`
   width: 100%;
   margin-bottom: 30px;
 
-  /* @media ${device.mobileUp} {
-    width: 48%;
-  }
-
-  @media ${device.tabletUp} {
-    width: 31.3%;
-  } */
-
   a {
     box-shadow: none;
     color: black;

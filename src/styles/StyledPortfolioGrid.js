@@ -3,16 +3,17 @@ import { device } from "./MediaQueries"
 
 export const StyledPortfolioGrid = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fill, 33.3%);
-  grid-gap: 1rem;
-  justify-content: space-between;
-
-  /* boring properties */
+  grid-template-columns: repeat(auto-fill, 100%);
   list-style: none;
-  /* margin: 0 auto; */
+  margin: 0;
 
-  /* @media ${device.mobileUp} {
-    flex-direction: row;
-    flex-wrap: wrap;
-  } */
+  @media ${device.mobileUp} {
+    grid-template-columns: repeat(auto-fill, 48%);
+    justify-content: space-between;
+    grid-gap: 1rem;
+  }
+
+  @media ${device.tabletUp} {
+    grid-template-columns: repeat(auto-fill, 30%);
+  }
 `
