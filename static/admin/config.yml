@@ -68,6 +68,7 @@ collections:
     folder: content/portfolio
     create: true
     fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "portfolio" }
       - label: "Featured Image"
         name: "thumbnail"
         widget: "image"
@@ -76,7 +77,6 @@ collections:
         media_library:
           config:
             multiple: false
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "portfolio" }
       - { name: title, label: Title }
       - { name: description, label: Description }
       - { name: body, label: Body, widget: markdown }
