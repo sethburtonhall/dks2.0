@@ -1,14 +1,33 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+// Create Blog Post & Portfolio Pages
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const blogTemplate = path.resolve(`./src/templates/blog-post.js`)
+  const portfolioTemplate = path.resolve(`./src/templates/portfolio.js`)
   return graphql(
     `
       {
-        allMdx(
+        blogs: allMdx(
+          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
+        portfolios: allMdx(
+          filter: { frontmatter: { templateKey: { eq: "portfolio" } } }
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -30,8 +49,8 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    // Create blog posts pages.
-    const posts = result.data.allMdx.edges
+    // Create blog post page.
+    const posts = result.data.blogs.edges
 
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
@@ -39,7 +58,26 @@ exports.createPages = ({ graphql, actions }) => {
 
       createPage({
         path: `blog${post.node.fields.slug}`,
-        component: blogPost,
+        component: blogTemplate,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    })
+
+    // Create portfolio page.
+    const portfolio = result.data.portfolios.edges
+
+    portfolio.forEach((post, index) => {
+      const previous =
+        index === portfolio.length - 1 ? null : portfolio[index + 1].node
+      const next = index === 0 ? null : portfolio[index - 1].node
+
+      createPage({
+        path: `portfolio${post.node.fields.slug}`,
+        component: portfolioTemplate,
         context: {
           slug: post.node.fields.slug,
           previous,

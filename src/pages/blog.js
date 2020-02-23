@@ -56,8 +56,8 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      filter: { excerpt: { ne: "" } }
       sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
     ) {
       edges {
         node {
