@@ -10,13 +10,6 @@ const PortfolioGrid = () => {
   return (
     <StyledPortfolioGrid>
       <PortfolioGridItem />
-      <PortfolioGridItem />
-      <PortfolioGridItem />
-      <PortfolioGridItem />
-      <PortfolioGridItem />
-      <PortfolioGridItem />
-      <PortfolioGridItem />
-      <PortfolioGridItem />
     </StyledPortfolioGrid>
   )
 }
