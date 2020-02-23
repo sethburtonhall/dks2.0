@@ -1,7 +1,7 @@
 ---
 templateKey: portfolio
 thumbnail: /assets/barney.jpg
-title: WHIMSICAL & CARICATURE
+title: Whimsical & Caricature
 description: >-
   My portfolio, indeed my entire artistic career would be eminently incomplete
   without humor and specifically, caricature.  In addition to studio
