@@ -44,6 +44,7 @@ const portfolioCover = graphql`
     }
     allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "portfolio" } } }
+      sort: { order: ASC, fields: id }
     ) {
       edges {
         node {
