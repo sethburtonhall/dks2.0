@@ -10,33 +10,43 @@ import { StyledPortfolioGridItem } from "../styles/StyledPortfolioGridItem"
 const PortfolioGridItem = () => {
   return (
     <StaticQuery
-      query={portfolioCoverImage}
+      query={portfolioCover}
       render={data => {
         const { slug } = data.allMdx.edges[0].node.fields
-        const { title, thumbnail } = data.allMdx.edges[0].node.frontmatter
+        const { edges } = data.allMarkdownRemark
         return (
-          <StyledPortfolioGridItem>
-            <Link to={`portfolio${slug}`}>
-              <img src={thumbnail} alt="Portfolio Cover" />
-              <h4 className="portfolio-cat">{title}</h4>
-            </Link>
-          </StyledPortfolioGridItem>
+          <>
+            {edges.map(({ node }, index) => (
+              <StyledPortfolioGridItem key={index}>
+                <Link to={`portfolio${slug}`}>
+                  <img src={node.frontmatter.thumbnail} alt="Portfolio Cover" />
+                  <h4 className="portfolio-cat">{node.frontmatter.title}</h4>
+                </Link>
+              </StyledPortfolioGridItem>
+            ))}
+          </>
         )
       }}
     />
   )
 }
 
-const portfolioCoverImage = graphql`
-  query PortfolioCoverImage {
-    allMdx(
-      filter: { frontmatter: { templateKey: { eq: "portfolio" } } }
-    ) {
+const portfolioCover = graphql`
+  query PortfolioCover {
+    allMdx(filter: { frontmatter: { templateKey: { eq: "portfolio" } } }) {
       edges {
         node {
           fields {
             slug
           }
+        }
+      }
+    }
+    allMarkdownRemark(
+      filter: { frontmatter: { templateKey: { eq: "portfolio" } } }
+    ) {
+      edges {
+        node {
           frontmatter {
             title
             thumbnail

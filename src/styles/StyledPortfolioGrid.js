@@ -1,18 +1,18 @@
 import styled from "styled-components"
 import { device } from "./MediaQueries"
 
-export const StyledPortfolioGrid = styled.div`
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
+export const StyledPortfolioGrid = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 33.3%);
+  grid-gap: 1rem;
+  justify-content: space-between;
 
-         @media ${device.mobileUp} {
-           flex-direction: row;
-           flex-wrap: wrap;
-         }
+  /* boring properties */
+  list-style: none;
+  /* margin: 0 auto; */
 
-         &:after {
-           content: "";
-           flex: auto;
-         }
-       `
+  /* @media ${device.mobileUp} {
+    flex-direction: row;
+    flex-wrap: wrap;
+  } */
+`
