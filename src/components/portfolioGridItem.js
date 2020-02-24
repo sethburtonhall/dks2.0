@@ -18,7 +18,7 @@ const PortfolioGridItem = () => {
             {edges.map(({ node }, index) => (
               <StyledPortfolioGridItem key={index}>
                 <Link to={`/portfolio${node.fields.slug}`}>
-                  <img src={node.frontmatter.thumbnail} alt="Portfolio Cover" />
+                  <img src={node.frontmatter.thumbnail.childImageSharp.fluid.src} alt="Portfolio Cover" />
                   <h4 className="portfolio-cat">{node.frontmatter.title}</h4>
                 </Link>
               </StyledPortfolioGridItem>
@@ -43,7 +43,13 @@ const portfolioCover = graphql`
           }
           frontmatter {
             title
-            thumbnail
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 630) {
+                  src
+                }
+              }
+            }
           }
         }
       }

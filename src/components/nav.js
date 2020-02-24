@@ -11,8 +11,8 @@ import { slide as Menu } from "react-burger-menu"
 import { StyledNav } from "../styles/Nav"
 
 const Nav = ({ location }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  let home
+  // const rootPath = `${__PATH_PREFIX__}/`
+  // let home
 
   // if (location !== rootPath) {
   //   home = (

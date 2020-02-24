@@ -28,6 +28,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `uploads`,
+        path: `${__dirname}/static/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content/pages`,
         name: `pages`,
       },
@@ -46,13 +53,13 @@ module.exports = {
         name: `portfolio`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `img`,
-        path: `${__dirname}/src/images`,
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     path: `${__dirname}/src/images`,
+    //     name: "images",
+    //   },
+    // },
     netlifyCmsPaths, // Including in your Gatsby plugins will transform any paths in your frontmatter
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -61,6 +68,7 @@ module.exports = {
       options: {
         plugins: [
           netlifyCmsPaths, // Including in your Remark plugins will transform any paths in your markdown body
+          `gatsby-remark-relative-images`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -82,13 +90,12 @@ module.exports = {
       options: {
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
-          `gatsby-remark-relative-images`,
-          // {
-          //   resolve: `gatsby-remark-images`,
-          //   options: {
-          //     maxWidth: 590,
-          //   },
-          // },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {

@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Bio from "../components/bio"
-import ImageTest from "../components/imageTest"
+import ImageTest from "../components/image"
 
 class About extends Component {
   render() {
