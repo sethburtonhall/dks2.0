@@ -1,6 +1,6 @@
 ---
 templateKey: portfolio
-thumbnail: /assets/barney.jpg
+thumbnail: /images/barney.jpg
 title: Whimsical & Caricature
 description: >-
   My portfolio, indeed my entire artistic career would be eminently incomplete
@@ -12,6 +12,7 @@ description: >-
   Goodwill Industries, Krispy Kreme, and others.  A picture is worth a thousand
   laughs!
 ---
-![Sir Andy Griffith](/assets/andy-griffith.gif "Sir Andy Griffith")
 
-![Birds of a Feather](/assets/birds-of-a-feather_181205_033950.gif "Birds of a Feather")
+![Sir Andy Griffith](/images/andy-griffith.gif "Sir Andy Griffith")
+
+![Birds of a Feather](/images/birds-of-a-feather_181205_033950.gif "Birds of a Feather")

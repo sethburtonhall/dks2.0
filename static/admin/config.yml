@@ -3,7 +3,7 @@ backend:
   repo: sethburtonhall/dks2.0
   branch: master
 
-media_folder: static/assets
+media_folder: src/images
 public_folder: assets
 
 publish_mode: editorial_workflow
@@ -17,7 +17,12 @@ collections:
     folder: content/blog
     create: true
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post" }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "blog-post",
+        }
       - { name: title, label: Title }
       - { name: date, label: Date, widget: date }
       - { name: description, label: Description }
@@ -69,7 +74,12 @@ collections:
     folder: content/portfolio
     create: true
     fields:
-      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "portfolio" }
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "portfolio",
+        }
       - label: "Featured Image"
         name: "thumbnail"
         widget: "image"

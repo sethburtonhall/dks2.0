@@ -23,7 +23,7 @@ class Layout extends Component {
             <Link to={`/`}>
               <img
                 className="logo"
-                src="../assets/dks-watermark.png"
+                src="../images/dks-watermark.png"
                 alt="Logo"
               />
             </Link>
@@ -35,7 +35,7 @@ class Layout extends Component {
         <Header>
           <h3 className="header">
             <Link to={`/`}>
-              <img className="logo" src="../assets/dks-watermark.png" alt="Logo" />
+              <img className="logo" src="../images/dks-watermark.png" alt="Logo" />
             </Link>
           </h3>
         </Header>

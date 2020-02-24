@@ -14,7 +14,7 @@ const Bio = () => {
         return (
           <Container>
             <img
-              src="/assets/david-stanley.jpg"
+              src="/images/david-stanley.jpg"
               alt={author}
             />
             <h1 className="name">{name}</h1>

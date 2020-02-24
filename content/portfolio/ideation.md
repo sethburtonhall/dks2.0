@@ -1,6 +1,6 @@
 ---
 templateKey: portfolio
-thumbnail: /assets/ideation.jpg
+thumbnail: /images/ideation.jpg
 title: Ideation
 description: >-
   Ideas are powerful.  Juice them up with illustration and they become
@@ -17,4 +17,5 @@ description: >-
   whatever the medium.  Scroll through my imagination and give this gallery a
   gander.
 ---
+
 Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.

@@ -1,6 +1,6 @@
 ---
 templateKey: portfolio
-thumbnail: /assets/sports.jpg
+thumbnail: /images/sports.jpg
 title: Sports
 description: >-
   Howard Cosell said that sports are a microcosm of life.  I’ve had numerous
@@ -9,6 +9,7 @@ description: >-
   my own passion for the game, and perhaps they each tell a small piece of my
   own story.  Suit up and scroll with me onto the field.
 ---
-![Front Row Seat](/assets/front-row-seat.gif "Front Row Seat")
 
-![Jim Brown](/assets/jim-brown.gif "Jim Brown")
+![Front Row Seat](/images/front-row-seat.gif "Front Row Seat")
+
+![Jim Brown](/images/jim-brown.gif "Jim Brown")

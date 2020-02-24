@@ -1,6 +1,6 @@
 ---
 templateKey: portfolio
-thumbnail: /assets/life-culture.jpg
+thumbnail: /images/life-culture.jpg
 title: Life & Culture
 description: >-
   I am privileged to partner often with Our State Magazine on their monthly
@@ -10,4 +10,5 @@ description: >-
   creativity, beauty, and telling great stories.  Dive in and enjoy this diverse
   gallery.
 ---
+
 Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.

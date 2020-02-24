@@ -1,6 +1,6 @@
 ---
 templateKey: portfolio
-thumbnail: /assets/historical.jpg
+thumbnail: /images/historical.jpg
 title: Historical
 description: >-
   There will never be a shortage of fascinating historical content.  Many of the
@@ -10,6 +10,7 @@ description: >-
   work, all of the illustrations here are either oil, pastel, or digital. Scroll
   down and take a stroll with me through the past.
 ---
-![Arrrgh State](/assets/arrgh-state.gif "Arrrgh State")
 
-![Arrrgh State](/assets/jocko-flocko.jpg "Arrrgh State")
+![Arrrgh State](/images/arrgh-state.gif "Arrrgh State")
+
+![Arrrgh State](/images/jocko-flocko.jpg "Arrrgh State")
