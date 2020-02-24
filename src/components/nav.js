@@ -14,18 +14,21 @@ const Nav = ({ location }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   let home
 
-  if (location !== rootPath) {
-    home = (
-      <Link id="home" to="/" className="menu-item">
-        Home
-      </Link>
-    )
-  }
+  // if (location !== rootPath) {
+  //   home = (
+  //     <Link id="home" to="/" className="menu-item">
+  //       Home
+  //     </Link>
+  //   )
+  // }
 
   return (
     <StyledNav>
       <Menu right noOverlay disableAutoFocus>
-        {home}
+        {/* {home} */}
+        <Link id="home" to="/" className="menu-item">
+          Home
+        </Link>
         <Link id="about" to="/about" className="menu-item">
           About
         </Link>
