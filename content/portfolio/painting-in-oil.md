@@ -1,7 +1,7 @@
 ---
 templateKey: portfolio
 thumbnail: /assets/oil-paintings.jpg
-title: PAINTING IN OIL
+title: Painting in Oil
 description: >-
   Below is a mix of assignments, commissions, and personal pieces.  I hope you
   enjoy viewing as much as I did creating them.
