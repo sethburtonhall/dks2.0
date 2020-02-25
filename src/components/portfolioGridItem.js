@@ -39,7 +39,7 @@ const portfolioCover = graphql`
   query PortfolioCover {
     allMdx(
       filter: { frontmatter: { templateKey: { eq: "portfolio" } } }
-      sort: { order: ASC, fields: id }
+      sort: { order: ASC, fields: frontmatter___title }
     ) {
       edges {
         node {
