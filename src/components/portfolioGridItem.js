@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 // Gatsby
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 // Styles
 import { StyledPortfolioGridItem } from "../styles/StyledPortfolioGridItem"
@@ -18,7 +19,11 @@ const PortfolioGridItem = () => {
             {edges.map(({ node }, index) => (
               <StyledPortfolioGridItem key={index}>
                 <Link to={`/portfolio${node.fields.slug}`}>
-                  <img src={node.frontmatter.thumbnail.childImageSharp.fluid.src} alt="Portfolio Cover" />
+                  <Img
+                    fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+                    durationFadeIn={1500}
+                    alt="Portfolio Cover"
+                  />
                   <h4 className="portfolio-cat">{node.frontmatter.title}</h4>
                 </Link>
               </StyledPortfolioGridItem>
@@ -45,8 +50,8 @@ const portfolioCover = graphql`
             title
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 630) {
-                  src
+                fluid {
+                  ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
             }

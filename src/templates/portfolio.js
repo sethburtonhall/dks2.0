@@ -45,6 +45,17 @@ export const query = graphql`
         description
       }
     }
+    allFile {
+      edges {
+        node {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
   }
 `
 

@@ -4,7 +4,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Bio from "../components/bio"
-import ImageTest from "../components/image"
 
 class About extends Component {
   render() {
@@ -17,7 +16,6 @@ class About extends Component {
           title="About"
           keywords={[`Illustration`, `Painting`, `North Carolina`]}
         />
-        <ImageTest testImage={this.props.data.testImage} />
         <Bio />
       </Layout>
     )
@@ -29,11 +27,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    testImage: imageSharp {
-      sizes(maxWidth: 1240) {
-        ...GatsbyImageSharpSizes
       }
     }
   }
