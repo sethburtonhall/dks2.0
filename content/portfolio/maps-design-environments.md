@@ -1,7 +1,7 @@
 ---
 templateKey: portfolio
 thumbnail: /images/maps-design.jpg
-title: "Maps, Design, & Environments"
+title: 'Maps, Design, & Environments'
 description: >-
   Some of the most interesting and challenging projects I've had the privilege
   of working on have been maps.  I'm not a cartographer, but I have enjoyed the
