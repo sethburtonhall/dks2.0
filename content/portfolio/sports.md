@@ -9,4 +9,6 @@ description: >-
   experience,   my own passion for the game, and perhaps they each tell a small
   piece of my   own story.  Suit up and scroll with me onto the field.
 ---
-test
+![](/images/jim-brown.gif)
+
+![](/images/front-row-seat.gif)
