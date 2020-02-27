@@ -11,7 +11,7 @@ const Bio = () => {
       query={bioQuery}
       render={data => {
         const { social } = data.site.siteMetadata
-        const { name, title, intro } = data.allFile.nodes[0].childMarkdownRemark.frontmatter
+        const { name, title, intro } = data.allFile.nodes[0].childMdx.frontmatter
         const image = data.file.childImageSharp.fluid
         return (
           <Container>
@@ -51,7 +51,7 @@ const bioQuery = graphql`
     }
     allFile(filter: { name: { eq: "about" } }) {
       nodes {
-        childMarkdownRemark {
+        childMdx {
           frontmatter {
             name
             title

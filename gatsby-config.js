@@ -24,12 +24,16 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-feed-mdx`,
+    // `gatsby-plugin-feed-mdx`,
+
+    netlifyCmsPaths, // Including in your Gatsby plugins will transform any paths in your frontmatter
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        // path: `${__dirname}/static/images`,
-        path: `${__dirname}/static/images`,
+        path: `${__dirname}/content/images`,
         name: `images`,
       },
     },
@@ -54,45 +58,46 @@ module.exports = {
         name: `portfolio`,
       },
     },
+
     // {
-    //   resolve: "gatsby-source-filesystem",
+    //   resolve: `gatsby-transformer-remark`,
     //   options: {
-    //     path: `${__dirname}/src/images`,
-    //     name: "images",
+    //     plugins: [
+    //       netlifyCmsPaths, // Including in your Remark plugins will transform any paths in your markdown body
+    //       {
+    //         resolve: `gatsby-remark-relative-images`,
+    //         options: {
+    //           name: `images`,
+    //         },
+    //       },
+    //       {
+    //         resolve: `gatsby-remark-images`,
+    //         options: {
+    //           // It's important to specify the maxWidth (in pixels) of
+    //           // the content container as this plugin uses this as the
+    //           // base for generating different widths of each image.
+    //           maxWidth: 930,
+    //           backgroundColor: "transparent", // required to display blurred image first
+    //         },
+    //       },
+    //     ],
     //   },
     // },
-    netlifyCmsPaths, // Including in your Gatsby plugins will transform any paths in your frontmatter
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          netlifyCmsPaths, // Including in your Remark plugins will transform any paths in your markdown body
-          `gatsby-remark-relative-images`,
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 930,
-              backgroundColor: "transparent", // required to display blurred image first
-            },
-          },
-        ],
-      },
-    },
-    {
-      resolve: "gatsby-plugin-netlify-cms",
-    },
+
+
+
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
           netlifyCmsPaths, // Including in your Remark plugins will transform any paths in your markdown body
-          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: `images`,
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -117,13 +122,22 @@ module.exports = {
         ],
       },
     },
+
+
+
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
+      resolve: "gatsby-plugin-netlify-cms",
     },
+
+
+
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     // edit below
+    //     // trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
