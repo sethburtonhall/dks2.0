@@ -6,4 +6,4 @@ description: TemplateKey Test Description ****TEST
 ---
 TemplateKey Test Body
 
-![](/images/350x150.png)
+![]()
