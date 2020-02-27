@@ -1,3 +1,4 @@
+// as of now I am not useing this component but keeping it around if I want to implement later
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
@@ -12,16 +13,16 @@ const PortfolioNavItem = () => {
     <StaticQuery
       query={portfolioItems}
       render={data => {
-        const { edges } = data.allMdx
+        const { navItems } = data.allMdx.nodes
         return (
           <>
-            {edges.map(({ node }, index) => (
+            {navItems.map((navItem, index) => (
               <StyledPortfolioNavItem key={index}>
                 <Link
-                  to={`/portfolio${node.fields.slug}`}
+                  to={`/portfolio${navItem.fields.slug}`}
                   activeClassName="active"
                 >
-                  {node.frontmatter.title}
+                  {navItem.frontmatter.title}
                 </Link>
               </StyledPortfolioNavItem>
             ))}
@@ -38,14 +39,12 @@ const portfolioItems = graphql`
       filter: { frontmatter: { templateKey: { eq: "portfolio" } } }
       sort: { order: ASC, fields: id }
     ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-          }
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
         }
       }
     }

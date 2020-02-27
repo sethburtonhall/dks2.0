@@ -11,14 +11,10 @@ const Bio = () => {
       query={bioQuery}
       render={data => {
         const { social } = data.site.siteMetadata
-        const { name, title, intro } = data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+        const { name, title, intro } = data.allFile.nodes[0].childMarkdownRemark.frontmatter
         const image = data.file.childImageSharp.fluid
         return (
           <Container>
-            {/* <img
-              src="/images/david-stanley.jpg"
-              alt={author}
-            /> */}
             <Img
               fluid={image}
               durationFadeIn={1500}
@@ -54,14 +50,12 @@ const bioQuery = graphql`
       }
     }
     allFile(filter: { name: { eq: "about" } }) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              name
-              title
-              intro
-            }
+      nodes {
+        childMarkdownRemark {
+          frontmatter {
+            name
+            title
+            intro
           }
         }
       }

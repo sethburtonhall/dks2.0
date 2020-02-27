@@ -9,7 +9,7 @@ const Testimonials = () => {
     <StaticQuery
       query={testimonialQuery}
       render={data => {
-        const { testimonial } = data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+        const {testimonial} = data.allFile.nodes[0].childMarkdownRemark.frontmatter
         return (
           <Container>
             <h1>Testimonials</h1>
@@ -17,7 +17,9 @@ const Testimonials = () => {
               {testimonial.map((t, index) => (
                 <div className="testimonial" key={index}>
                   <p>{t.quote}</p>
-                  <p>{t.name} - {t.position} - {t.company}</p>
+                  <p>
+                    {t.name} - {t.position} - {t.company}
+                  </p>
                 </div>
               ))}
             </div>
@@ -31,16 +33,14 @@ const Testimonials = () => {
 const testimonialQuery = graphql`
   query TestimonialQuery {
     allFile(filter: { name: { eq: "testimonials" } }) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              testimonial {
-                quote
-                name
-                position
-                company
-              }
+      nodes {
+        childMarkdownRemark {
+          frontmatter {
+            testimonial {
+              quote
+              name
+              position
+              company
             }
           }
         }

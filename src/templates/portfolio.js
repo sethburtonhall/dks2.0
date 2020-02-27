@@ -2,15 +2,20 @@ import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
+// Components
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import PortfolioNav from "../components/porfolioNav"
+// import PortfolioNav from "../components/porfolioNav"
+import Pagination from "../components/pagination"
+
 // import { rhythm, scale } from "../utils/typography"
 
 class PortfolioTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
     const siteTitle = this.props.data.site.siteMetadata.title
+    const { previous, next } = this.props.pageContext
+    console.log(this.props.pageContext)
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -18,10 +23,11 @@ class PortfolioTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <PortfolioNav />
+        {/* <PortfolioNav /> */}
         <h1>{post.frontmatter.title}</h1>
         <p>{post.frontmatter.description}</p>
         <MDXRenderer>{post.body}</MDXRenderer>
+        <Pagination previous={next} next={previous} type="portfolio" />
       </Layout>
     )
   }
@@ -46,12 +52,10 @@ export const query = graphql`
       }
     }
     allFile {
-      edges {
-        node {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+      nodes {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }

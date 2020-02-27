@@ -18,8 +18,8 @@ class Client extends Component {
           title="Clients"
           keywords={[`Illustration`, `Painting`, `North Carolina`]}
         />
-        <Clients />
         <Testimonials />
+        <Clients />
       </Layout>
     )
   }

@@ -12,7 +12,7 @@ const ContactInfo = () => {
         const {
           email,
           phone,
-        } = data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+        } = data.allFile.nodes[0].childMarkdownRemark.frontmatter
         return (
           <Container>
             <div className="contact">
@@ -29,13 +29,11 @@ const ContactInfo = () => {
 const contactQuery = graphql`
   query ContactQuery {
     allFile(filter: { name: { eq: "contact" } }) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              email
-              phone
-            }
+      nodes {
+        childMarkdownRemark {
+          frontmatter {
+            email
+            phone
           }
         }
       }

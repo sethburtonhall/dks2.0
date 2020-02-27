@@ -9,7 +9,7 @@ const Clients = () => {
     <StaticQuery
       query={clientQuery}
       render={data => {
-        const { client } = data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+        const { client } = data.allFile.nodes[0].childMarkdownRemark.frontmatter
         return (
           <Container>
             <h1>Clients</h1>
@@ -28,13 +28,11 @@ const Clients = () => {
 const clientQuery = graphql`
   query ClientQuery {
     allFile(filter: { name: { eq: "clients" } }) {
-      edges {
-        node {
-          childMarkdownRemark {
-            frontmatter {
-              client {
-                clientName
-              }
+      nodes {
+        childMarkdownRemark {
+          frontmatter {
+            client {
+              clientName
             }
           }
         }
