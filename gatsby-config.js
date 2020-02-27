@@ -28,9 +28,9 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `uploads`,
         // path: `${__dirname}/static/images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/images`,
+        name: `images`,
       },
     },
     {
@@ -91,6 +91,8 @@ module.exports = {
       options: {
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
+          netlifyCmsPaths, // Including in your Remark plugins will transform any paths in your markdown body
+          `gatsby-remark-relative-images`,
           {
             resolve: `gatsby-remark-images`,
             options: {
